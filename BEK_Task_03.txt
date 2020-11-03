@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BEK_Task_03
+{
+    class Program
+    {
+        
+public static int t = 2;
+        static void Main(string[] args)
+        { 
+          
+           string kod = "BEK27";
+           
+            
+            
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine("Введите пароль: ");
+                string password = Console.ReadLine();
+                if (password == "BEK27")
+                {
+
+                    goto Finish_good;
+
+                }
+
+                else if (t == 0)
+                {
+                    cONSOLE.WriteLine("Секретное сообщение");
+                }
+                else
+                {
+
+                    Console.WriteLine($"Пароль неверен, кол-во попыток: {t}");
+                    t--;
+                }
+
+
+
+            }
+        
+            
+            Console.ReadKey();
+
+
+
+        }
+    }
+}
